@@ -1,6 +1,6 @@
 import 'package:avaliacao_1/src/features/menu/presentation/widgets/menu_opcao.dart';
 import 'package:avaliacao_1/src/features/menu/presentation/widgets/menu_perfil.dart';
-import 'package:avaliacao_1/src/features/sobre/pages/sobre_screen.dart';
+import 'package:avaliacao_1/src/features/sobre/presentation/pages/sobre_screen.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
