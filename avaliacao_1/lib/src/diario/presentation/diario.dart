@@ -13,11 +13,31 @@ class Diario extends StatelessWidget {
           decoration: const BoxDecoration(
             color: Color.fromRGBO(101, 97, 142, 1),
           ),
-          child: const Column(
+          child: Column(
             mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              TelaInicial(),
-              
+              const TelaInicial(),
+              Padding(
+                padding: const EdgeInsets.only(right: 30),
+                child: SizedBox(
+                  width: 120,
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      shape: const RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(10))
+                      ),
+                      backgroundColor: const Color.fromARGB(255, 36, 36, 75)
+                    ),
+                    onPressed: () {}, 
+                    child: const Text(
+                      'Enviar',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
