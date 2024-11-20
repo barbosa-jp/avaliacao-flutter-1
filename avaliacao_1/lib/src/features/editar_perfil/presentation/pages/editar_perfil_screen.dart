@@ -1,3 +1,4 @@
+import 'package:avaliacao_1/src/features/mandar_texto/presentation/widgets/blocos_texto.dart';
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 
@@ -6,6 +7,12 @@ class EditarPerfil extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("Oi");
+    return Column( 
+      children: [
+        ...blocosTexto.map((text) {
+        return Text(text);
+      })
+      ]
+    );
   }
 }
