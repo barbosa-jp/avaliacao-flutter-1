@@ -16,7 +16,7 @@ class TelaInicial extends StatelessWidget {
               child: TextField(
                 cursorColor: Colors.white,
                 style: TextStyle(color: Colors.white),
-                maxLines: 20,
+                maxLines: 23,
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   filled: true,
