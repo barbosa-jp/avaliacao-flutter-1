@@ -1,4 +1,5 @@
 import 'package:avaliacao_1/src/features/abas/presentation/aba.dart';
+import 'package:avaliacao_1/src/features/cores/cores.dart';
 import 'package:avaliacao_1/src/features/tela_incial/presentation/widgets/botao_enviar.dart';
 import 'package:flutter/material.dart';
 import 'package:avaliacao_1/src/features/tela_incial/presentation/pages/tela_incial_screen.dart';
@@ -25,7 +26,7 @@ class Diario extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 20),
                   icon: const Icon(
                     Icons.menu,
-                    color: Colors.white,
+                    color: Cores.branco,
                     size: 40,
                   ),
                   onPressed: () {
@@ -44,8 +45,8 @@ class Diario extends StatelessWidget {
             ),
             backgroundColor: const Color.fromRGBO(36, 36, 75, 1),
             bottom: const TabBar(
-              dividerColor: Colors.transparent,
-              indicatorColor: Colors.white,
+              dividerColor: Cores.tranparente,
+              indicatorColor: Cores.branco,
               tabs: [
                 Aba(icone: Icons.edit_square),
                 Aba(icone: Icons.settings)
@@ -53,12 +54,12 @@ class Diario extends StatelessWidget {
             ),
           ),
           drawer: const Drawer(
-            backgroundColor: Color.fromRGBO(69, 67, 109, 1),
+            backgroundColor: Cores.roxo3,
             child: Menu()
           ),
           body: Container(
             decoration: const BoxDecoration(
-              color: Color.fromRGBO(101, 97, 142, 1),
+              color: Cores.roxo1,
             ),
             child: const TabBarView(
               children: [

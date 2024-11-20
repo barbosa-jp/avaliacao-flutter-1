@@ -1,3 +1,4 @@
+import 'package:avaliacao_1/src/features/cores/cores.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -15,16 +16,18 @@ class TelaInicial extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(bottom: 20),
               child: TextField(
-                cursorColor: Colors.white,
-                style: GoogleFonts.lato(color: Colors.white),
+                cursorColor: Cores.branco,
+                style: GoogleFonts.lato(
+                  color: Cores.branco
+                ),
                 maxLines: 23,
                 keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 85, 82, 125),
+                  fillColor: Cores.roxo2,
                   hintText: 'Como foi seu dia?',
                   hintStyle: GoogleFonts.lato(
-                    color: const Color.fromARGB(100, 255, 255, 255)
+                    color: Cores.branco50
                   ),
                   border: const OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(10)),

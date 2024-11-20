@@ -1,3 +1,4 @@
+import 'package:avaliacao_1/src/features/cores/cores.dart';
 import 'package:flutter/material.dart';
 
 class Aba extends StatelessWidget {
@@ -15,7 +16,7 @@ class Aba extends StatelessWidget {
         children: [          
           Icon(
             icone,
-            color: Colors.white,
+            color: Cores.branco,
           )
         ] 
       )
