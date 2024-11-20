@@ -1,4 +1,4 @@
-import 'package:avaliacao_1/src/features/cores/cores.dart';
+import 'package:avaliacao_1/src/features/cores/data/cores.dart';
 import 'package:flutter/material.dart';
 
 class MenuPerfil extends StatelessWidget {
@@ -21,7 +21,7 @@ class MenuPerfil extends StatelessWidget {
                 height: 90,
                 width: 90,
                 child: CircleAvatar(
-                  backgroundColor: Color.fromRGBO(36, 36, 75, 1),
+                  backgroundColor: Cores.roxo5,
                   child: Icon(
                     Icons.person_2_sharp,
                     size: 50,

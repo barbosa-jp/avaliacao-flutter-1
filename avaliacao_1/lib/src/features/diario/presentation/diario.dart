@@ -1,18 +1,17 @@
-import 'package:avaliacao_1/src/features/abas/presentation/aba.dart';
-import 'package:avaliacao_1/src/features/cores/cores.dart';
-import 'package:avaliacao_1/src/features/tela_incial/presentation/widgets/botao_enviar.dart';
+import 'package:avaliacao_1/src/features/cores/data/cores.dart';
 import 'package:flutter/material.dart';
-import 'package:avaliacao_1/src/features/tela_incial/presentation/pages/tela_incial_screen.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:avaliacao_1/src/features/menu/presentation/pages/menu.dart';
+import 'package:avaliacao_1/src/features/app_bar/presentation/widgets/appbar_leading.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:avaliacao_1/src/features/abas/presentation/widgets/aba.dart';
+import 'package:avaliacao_1/src/features/tela_inicial/presentation/pages/tela_inicial_screen.dart';
 
 class Diario extends StatelessWidget {
   const Diario({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-        //controller for TabBar
+    return DefaultTabController( //controller for TabBar
       length: 2,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -20,30 +19,16 @@ class Diario extends StatelessWidget {
           appBar: AppBar(
             toolbarHeight: 70,
             centerTitle: true,
-            leading: Builder(
-              builder: (context) { 
-                return IconButton(
-                  padding: const EdgeInsets.only(left: 20),
-                  icon: const Icon(
-                    Icons.menu,
-                    color: Cores.branco,
-                    size: 40,
-                  ),
-                  onPressed: () {
-                    Scaffold.of(context).openDrawer();
-                  },
-                );
-              }
-            ),
+            backgroundColor: const Color.fromRGBO(36, 36, 75, 1),
+            leading: const AppBarLeading(),
             title: Text(
               'Diário',
               style: GoogleFonts.lato(
-                  color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.bold
-                ),
+                color: Colors.white,
+                fontSize: 30,
+                fontWeight: FontWeight.bold
+              ),
             ),
-            backgroundColor: const Color.fromRGBO(36, 36, 75, 1),
             bottom: const TabBar(
               dividerColor: Cores.tranparente,
               indicatorColor: Cores.branco,
@@ -57,30 +42,7 @@ class Diario extends StatelessWidget {
             backgroundColor: Cores.roxo3,
             child: Menu()
           ),
-          body: Container(
-            decoration: const BoxDecoration(
-              color: Cores.roxo1,
-            ),
-            child: const TabBarView(
-              children: [
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    TelaInicial(),
-                    BotaoEnviar(),
-                  ],
-                ),
-                Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    TelaInicial(),
-                  ],
-                ),
-              ]
-            ) 
-          ),
+          body: const TelaInicial()
         ),
       )
     );
