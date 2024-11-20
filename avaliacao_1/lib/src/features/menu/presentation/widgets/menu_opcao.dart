@@ -1,3 +1,4 @@
+import 'package:avaliacao_1/src/features/cores/cores.dart';
 import 'package:flutter/material.dart';
 
 class MenuOpcao extends StatelessWidget {
@@ -15,7 +16,7 @@ class MenuOpcao extends StatelessWidget {
         ),
         Icon(
           icone,
-          color: Colors.white,
+          color: Cores.branco,
           size: 30,
         ),
         const SizedBox(
@@ -24,7 +25,9 @@ class MenuOpcao extends StatelessWidget {
         Text(
           texto,
           style: const TextStyle(
-              color: Colors.white, fontSize: 20),
+            color: Cores.branco,
+            fontSize: 20
+          ),
         ),
       ],
     );

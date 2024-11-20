@@ -1,3 +1,4 @@
+import 'package:avaliacao_1/src/features/cores/cores.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,13 +17,13 @@ class BotaoEnviar extends StatelessWidget {
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(Radius.circular(10))
             ),
-            backgroundColor: const Color.fromARGB(255, 36, 36, 75)
+            backgroundColor: Cores.roxo5
           ),
           onPressed: () {}, 
           child: Text(
             'Enviar',
             style: GoogleFonts.lato(
-              color: Colors.white,
+              color: Cores.branco,
               fontSize: 18,
             ),
           )

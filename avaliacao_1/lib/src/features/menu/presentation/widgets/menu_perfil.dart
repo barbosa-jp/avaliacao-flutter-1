@@ -1,3 +1,4 @@
+import 'package:avaliacao_1/src/features/cores/cores.dart';
 import 'package:flutter/material.dart';
 
 class MenuPerfil extends StatelessWidget {
@@ -11,7 +12,7 @@ class MenuPerfil extends StatelessWidget {
       ),
       child: const DrawerHeader(
         decoration: BoxDecoration(
-          color: Color.fromRGBO(52, 48, 187, 1),
+          color: Cores.roxo4,
         ),
         child: Column(
           children: [
@@ -21,8 +22,11 @@ class MenuPerfil extends StatelessWidget {
                 width: 90,
                 child: CircleAvatar(
                   backgroundColor: Color.fromRGBO(36, 36, 75, 1),
-                  child: Icon(Icons.person_2_sharp,
-                      size: 50, color: Colors.white54),
+                  child: Icon(
+                    Icons.person_2_sharp,
+                    size: 50,
+                    color: Cores.branco50 
+                  ),
                 ),
               ),
             ),
@@ -32,9 +36,10 @@ class MenuPerfil extends StatelessWidget {
             Text(
               'João Pedro',
               style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25),
+                color: Cores.branco,
+                fontWeight: FontWeight.bold,
+                fontSize: 25
+              ),
             )
           ],
         ),
