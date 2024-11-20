@@ -1,6 +1,5 @@
 import 'package:avaliacao_1/src/features/cores/data/cores.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SobreApp extends StatelessWidget {
   const SobreApp({super.key});
