@@ -1,4 +1,4 @@
-import 'package:avaliacao_1/src/features/cores/cores.dart';
+import 'package:avaliacao_1/src/features/cores/data/cores.dart';
 import 'package:flutter/material.dart';
 
 class Aba extends StatelessWidget {
