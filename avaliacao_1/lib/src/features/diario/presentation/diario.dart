@@ -3,6 +3,7 @@ import 'package:avaliacao_1/src/features/tela_incial/presentation/widgets/botao_
 import 'package:flutter/material.dart';
 import 'package:avaliacao_1/src/features/tela_incial/presentation/pages/tela_incial_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:avaliacao_1/src/features/menu/presentation/pages/menu.dart';
 
 class Diario extends StatelessWidget {
   const Diario({super.key});
@@ -18,14 +19,21 @@ class Diario extends StatelessWidget {
           appBar: AppBar(
             toolbarHeight: 70,
             centerTitle: true,
-            leading: IconButton(
-                padding: const EdgeInsets.only(left: 20),
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.menu,
-                  color: Colors.white,
-                  size: 40,
-                )),
+            leading: Builder(
+              builder: (context) { 
+                return IconButton(
+                  padding: const EdgeInsets.only(left: 20),
+                  icon: const Icon(
+                    Icons.menu,
+                    color: Colors.white,
+                    size: 40,
+                  ),
+                  onPressed: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                );
+              }
+            ),
             title: Text(
               'Diário',
               style: GoogleFonts.lato(
@@ -43,6 +51,10 @@ class Diario extends StatelessWidget {
                 Aba(icone: Icons.settings)
               ],
             ),
+          ),
+          drawer: const Drawer(
+            backgroundColor: Color.fromRGBO(69, 67, 109, 1),
+            child: Menu()
           ),
           body: Container(
             decoration: const BoxDecoration(
