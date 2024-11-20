@@ -16,14 +16,21 @@ class Diario extends StatelessWidget {
             appBar: AppBar(
               toolbarHeight: 70,
               centerTitle: true,
-              leading: IconButton(
-                  padding: const EdgeInsets.only(left: 20),
-                  onPressed: () {},
-                  icon: const Icon(
-                    Icons.menu,
-                    color: Colors.white,
-                    size: 40,
-                  )),
+              leading: Builder(
+                builder: (context) { 
+                  return IconButton(
+                    padding: const EdgeInsets.only(left: 20),
+                    icon: const Icon(
+                      Icons.menu,
+                      color: Colors.white,
+                      size: 40,
+                    ),
+                    onPressed: () {
+                      Scaffold.of(context).openDrawer();
+                    },
+                  );
+                }
+              ),
               title: const Text(
                 'Diário',
                 style: TextStyle(
@@ -41,12 +48,42 @@ class Diario extends StatelessWidget {
                 ],
               ),
             ),
-            body: Container(
-              decoration: const BoxDecoration(
-                color: Color.fromRGBO(101, 97, 142, 1),
-              ),
-              child: TabBarView(
+             drawer: Drawer(
+               // Add a ListView to the drawer. This ensures the user can scroll
+  // through the options in the drawer if there isn't enough vertical
+  // space to fit everything.
+              child: ListView(
+                // Important: Remove any padding from the ListView.
+                padding: EdgeInsets.zero,
                 children: [
+                  const DrawerHeader(
+                    decoration: BoxDecoration(
+                      color: Colors.blue,
+                    ),
+                    child: Text('Drawer Header'),
+                  ),
+                  ListTile(
+                    title: const Text('Item 1'),
+                    onTap: () {
+                      // Update the state of the app.
+                      // ...
+                    },
+                  ),
+                  ListTile(
+                    title: const Text('Item 2'),
+                    onTap: () {
+                      // Update the state of the app.
+                      // ...
+                    },
+                  ),
+                ],
+              ),
+            ),
+            body: Container(
+                decoration: const BoxDecoration(
+                  color: Color.fromRGBO(101, 97, 142, 1),
+                ),
+                child: TabBarView(children: [
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -59,21 +96,20 @@ class Diario extends StatelessWidget {
                           width: 135,
                           height: 45,
                           child: OutlinedButton(
-                            style: OutlinedButton.styleFrom(
-                              shape: const RoundedRectangleBorder(
-                                borderRadius: BorderRadius.all(Radius.circular(10))
-                              ),
-                              backgroundColor: const Color.fromARGB(255, 36, 36, 75)
-                            ),
-                            onPressed: () {}, 
-                            child: const Text(
-                              'Enviar',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 18,
-                              ),
-                            )
-                          ),
+                              style: OutlinedButton.styleFrom(
+                                  shape: const RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.all(
+                                          Radius.circular(10))),
+                                  backgroundColor:
+                                      const Color.fromARGB(255, 36, 36, 75)),
+                              onPressed: () {},
+                              child: const Text(
+                                'Enviar',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                              )),
                         ),
                       ),
                     ],
@@ -84,11 +120,8 @@ class Diario extends StatelessWidget {
                       TelaInicial(),
                     ],
                   ),
-                ]
-              ) 
-            ),
+                ])),
           ),
-        )
-      );
+        ));
   }
 }
