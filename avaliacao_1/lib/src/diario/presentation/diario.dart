@@ -33,6 +33,8 @@ class Diario extends StatelessWidget {
               ),
               backgroundColor: const Color.fromRGBO(36, 36, 75, 1),
               bottom: const TabBar(
+                dividerColor: Colors.transparent,
+                indicatorColor: Colors.white,
                 tabs: [
                   Aba(icone: Icons.edit_square),
                   Aba(icone: Icons.settings)

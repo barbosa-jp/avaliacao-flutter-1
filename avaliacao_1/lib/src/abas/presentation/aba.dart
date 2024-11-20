@@ -7,11 +7,17 @@ class Aba extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return IconButton(
-      onPressed: () {},
-      icon: Icon(
-        icone,
-        color: Colors.white
+    return SizedBox(
+      height: 70,
+      child: Row(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [          
+          Icon(
+            icone,
+            color: Colors.white,
+          )
+        ] 
       )
     );
   }
