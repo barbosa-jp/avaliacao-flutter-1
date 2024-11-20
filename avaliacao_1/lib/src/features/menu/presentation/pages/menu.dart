@@ -1,5 +1,6 @@
 import 'package:avaliacao_1/src/features/menu/presentation/widgets/menu_opcao.dart';
 import 'package:avaliacao_1/src/features/menu/presentation/widgets/menu_perfil.dart';
+import 'package:avaliacao_1/src/features/sobre/pages/sobre_screen.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
@@ -10,14 +11,22 @@ class Menu extends StatelessWidget {
     return ListView( 
       padding: EdgeInsets.zero,
       children: [
-          const MenuPerfil(),
-          ListTile(
-            title: const MenuOpcao(icone: Icons.person_2_sharp, texto: 'Perfil'),
-            onTap: () {},
-          ),
-          ListTile(
-            title: const MenuOpcao(icone: Icons.info_outline, texto: 'Sobre'),
-            onTap: () {},
+        const MenuPerfil(),
+        ListTile(
+          title: const MenuOpcao(icone: Icons.person_2_sharp, texto: 'Perfil'),
+          onTap: () {},
+        ),
+        ListTile(
+          title: const MenuOpcao(icone: Icons.info_outline, texto: 'Sobre'),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) {
+                  return const SobreScreen();
+                }
+              )
+            );
+          },
         )
       ]
     );
