@@ -1,6 +1,7 @@
 import 'package:avaliacao_1/src/abas/presentation/aba.dart';
 import 'package:flutter/material.dart';
 import 'package:avaliacao_1/src/tela_incial/presentation/tela_incial_screen.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Diario extends StatelessWidget {
   const Diario({super.key});
@@ -24,12 +25,13 @@ class Diario extends StatelessWidget {
                     color: Colors.white,
                     size: 40,
                   )),
-              title: const Text(
+              title: Text(
                 'Diário',
-                style: TextStyle(
+                style: GoogleFonts.lato(
                     color: Colors.white,
                     fontSize: 30,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.bold
+                  ),
               ),
               backgroundColor: const Color.fromRGBO(36, 36, 75, 1),
               bottom: const TabBar(
@@ -66,9 +68,9 @@ class Diario extends StatelessWidget {
                               backgroundColor: const Color.fromARGB(255, 36, 36, 75)
                             ),
                             onPressed: () {}, 
-                            child: const Text(
+                            child: Text(
                               'Enviar',
-                              style: TextStyle(
+                              style: GoogleFonts.lato(
                                 color: Colors.white,
                                 fontSize: 18,
                               ),
