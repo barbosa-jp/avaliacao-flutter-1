@@ -16,13 +16,12 @@ class _MandarTextoState extends State<MandarTexto> {
 
   @override
   void dispose() {
-    // Clean up the controller when the widget is disposed.
     meuControlador.dispose();
     super.dispose();
   }
 
   void enviar() {
-    colocarTexto(meuControlador.text);
+    blocosTexto.add(meuControlador.text);
   }
 
   @override
