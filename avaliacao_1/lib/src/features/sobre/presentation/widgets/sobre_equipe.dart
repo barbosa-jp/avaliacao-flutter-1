@@ -1,5 +1,6 @@
-import 'package:avaliacao_1/src/features/cores/data/cores.dart';
+import 'package:avaliacao_1/src/features/cores/core/cores.dart';
 import 'package:avaliacao_1/src/features/sobre/presentation/widgets/membro_equipe.dart';
+import 'package:avaliacao_1/src/features/sobre/data/membros_equipe.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,14 +20,12 @@ class SobreEquipe extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        const MembroEquipe(
-          descricao: 'Diário é um aplicativo para ajudar pessoa a organizar seus pensamentos ou documentar experiências do dia a dia.',
-          imagem: 'assets/images/luana.jpg'
-        ),
-        const MembroEquipe(
-          descricao: 'Diário é um aplicativo para ajudar pessoa a organizar seus pensamentos ou documentar experiências do dia a dia.',
-          imagem: 'assets/images/joaopedro.jpg'
-        )
+        ...membrosEquipe.map((membro) {
+          return MembroEquipe(
+            imagem: membro[0],
+            descricao: membro[1],
+          );
+        })
       ]
     );
   }

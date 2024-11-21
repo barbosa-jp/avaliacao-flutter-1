@@ -1,21 +1,21 @@
 import 'package:avaliacao_1/src/features/cores/core/cores.dart';
 import 'package:flutter/material.dart';
 
-class MenuPerfil extends StatelessWidget {
-  const MenuPerfil({super.key});
+class Perfil extends StatelessWidget {
+  const Perfil({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return Theme(
-      data: Theme.of(context).copyWith(
-        dividerTheme: const DividerThemeData(color: Cores.tranparente),
-      ),
-      child: const DrawerHeader(
+  build(context) {
+    return const SizedBox(
+      child: DecoratedBox(
         decoration: BoxDecoration(
           color: Cores.roxo4,
         ),
         child: Column(
           children: [
+            SizedBox(
+              height: 20,
+            ),
             Center(
               child: SizedBox(
                 height: 90,
@@ -23,27 +23,24 @@ class MenuPerfil extends StatelessWidget {
                 child: CircleAvatar(
                   backgroundColor: Cores.roxo5,
                   child: Icon(
-                    Icons.person_2_sharp,
-                    size: 50,
-                    color: Cores.branco50 
+                    Icons.person_2_sharp, size: 50, color: Cores.branco50
                   ),
                 ),
               ),
             ),
-            SizedBox(
-              height: 5,
-            ),
+            SizedBox(height: 5,),
             Text(
               'João Pedro',
               style: TextStyle(
-                color: Cores.branco,
-                fontWeight: FontWeight.bold,
+                color: Cores.branco, 
+                fontWeight: FontWeight.bold, 
                 fontSize: 25
               ),
-            )
+            ),
+            SizedBox(height: 20,)
           ],
         ),
-      ),
+      )
     );
   }
 }

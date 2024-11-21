@@ -1,15 +1,19 @@
 import 'package:avaliacao_1/src/features/app_bar/presentation/widgets/appbar_leading.dart';
-import 'package:avaliacao_1/src/features/cores/core/cores.dart';
 import 'package:avaliacao_1/src/features/butao_home/presentation/widgets/button_home.dart';
+import 'package:avaliacao_1/src/features/cores/core/cores.dart';
 import 'package:avaliacao_1/src/features/menu/presentation/pages/menu.dart';
-import 'package:avaliacao_1/src/features/sobre/presentation/widgets/sobre_app.dart';
-import 'package:avaliacao_1/src/features/sobre/presentation/widgets/sobre_equipe.dart';
+import 'package:avaliacao_1/src/features/perfil/presentation/widgets/perfil.dart';
+import 'package:avaliacao_1/src/features/perfil/presentation/widgets/textos.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SobreScreen extends StatelessWidget {
-  const SobreScreen({super.key});
+class PerfilScreen extends StatefulWidget {
+  const PerfilScreen({super.key});
+  @override
+  State<PerfilScreen> createState() => _PerfilScreenState();
+}
 
+class _PerfilScreenState extends State<PerfilScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,23 +39,22 @@ class SobreScreen extends StatelessWidget {
           child: Menu(),
         ),
         body: SingleChildScrollView(
-          child: Container (
+          child: Container(
+            height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             decoration: const BoxDecoration(
               color: Cores.roxo1,
             ),
             child: const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max, 
               children: [
-                SizedBox(height: 20,),
-                SobreApp(),
-                SizedBox(height: 20,),
-                SobreEquipe(),
-                SizedBox(height: 20,)
+                Perfil(),
+                SizedBox(height: 20),
+                Textos()
               ]
-            ),
-          ),
-        ),
+            )
+          )
+        )
       ),
     );
   }

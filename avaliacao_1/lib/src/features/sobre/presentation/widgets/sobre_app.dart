@@ -1,4 +1,4 @@
-import 'package:avaliacao_1/src/features/cores/data/cores.dart';
+import 'package:avaliacao_1/src/features/cores/core/cores.dart';
 import 'package:flutter/material.dart';
 
 class SobreApp extends StatelessWidget {
@@ -17,9 +17,7 @@ class SobreApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        SizedBox(
-          height: 20,
-        ),
+        SizedBox(height: 20,),
         SizedBox(
           width: 350,
           child: DecoratedBox(

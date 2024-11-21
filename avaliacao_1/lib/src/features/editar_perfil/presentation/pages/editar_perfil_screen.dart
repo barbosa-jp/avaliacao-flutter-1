@@ -1,4 +1,4 @@
-import 'package:avaliacao_1/src/features/mandar_texto/presentation/widgets/blocos_texto.dart';
+import 'package:avaliacao_1/src/features/mandar_texto/data/blocos_texto.dart';
 import 'package:flutter/material.dart';
 // import 'package:google_fonts/google_fonts.dart';
 

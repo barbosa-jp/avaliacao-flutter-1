@@ -1,4 +1,4 @@
-import 'package:avaliacao_1/src/features/cores/data/cores.dart';
+import 'package:avaliacao_1/src/features/cores/core/cores.dart';
 import 'package:flutter/material.dart';
 import 'package:avaliacao_1/src/features/menu/presentation/pages/menu.dart';
 import 'package:avaliacao_1/src/features/app_bar/presentation/widgets/appbar_leading.dart';
@@ -19,12 +19,12 @@ class Diario extends StatelessWidget {
           appBar: AppBar(
             toolbarHeight: 70,
             centerTitle: true,
-            backgroundColor: const Color.fromRGBO(36, 36, 75, 1),
+            backgroundColor: Cores.roxo5,
             leading: const AppBarLeading(),
             title: Text(
               'Diário',
               style: GoogleFonts.lato(
-                color: Colors.white,
+                color: Cores.branco,
                 fontSize: 30,
                 fontWeight: FontWeight.bold
               ),

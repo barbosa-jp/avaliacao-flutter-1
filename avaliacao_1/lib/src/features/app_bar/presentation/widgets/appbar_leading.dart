@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:avaliacao_1/src/features/cores/data/cores.dart';
+import 'package:avaliacao_1/src/features/cores/core/cores.dart';
 
 class AppBarLeading extends StatelessWidget {
   const AppBarLeading({super.key});
