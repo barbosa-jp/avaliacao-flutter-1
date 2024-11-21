@@ -1,5 +1,6 @@
 import 'package:avaliacao_1/src/features/app_bar/presentation/widgets/appbar_leading.dart';
 import 'package:avaliacao_1/src/features/cores/data/cores.dart';
+import 'package:avaliacao_1/src/features/diario/presentation/diario.dart';
 import 'package:avaliacao_1/src/features/menu/presentation/pages/menu.dart';
 import 'package:avaliacao_1/src/features/sobre/presentation/widgets/sobre_app.dart';
 import 'package:avaliacao_1/src/features/sobre/presentation/widgets/sobre_equipe.dart';
@@ -19,6 +20,18 @@ class SobreScreen extends StatelessWidget {
           centerTitle: true,
           backgroundColor: const Color.fromRGBO(36, 36, 75, 1),
           leading: const AppBarLeading(),
+          actions: <Widget>[
+              IconButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const Diario();
+                      }
+                    )
+                  );
+                },
+                icon: const Icon(Icons.home, color: Cores.branco, size: 40))],
           title: Text(
             'Diário',
             style: GoogleFonts.lato(
